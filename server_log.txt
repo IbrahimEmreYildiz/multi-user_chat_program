@@ -33,3 +33,21 @@ Emre_3 bağlandı (('127.0.0.1', 53159))
 Emre_2 ayrıldı (('127.0.0.1', 64363))
 Emre ayrıldı (('127.0.0.1', 59485))
 Emre_3 ayrıldı (('127.0.0.1', 53159))
+Emre bağlandı (('127.0.0.1', 51832))
+Kaan bağlandı (('127.0.0.1', 51833))
+Mehmet bağlandı (('127.0.0.1', 51835))
+[PRIVATE] Emre -> Kaan: Merhana
+[PRIVATE] Emre -> Kaan: Merhaba*
+Emre ayrıldı (('127.0.0.1', 51832))
+Kaan ayrıldı (('127.0.0.1', 51833))
+Mehmet ayrıldı (('127.0.0.1', 51835))
+Emre bağlandı (('127.0.0.1', 57507))
+Kaan bağlandı (('127.0.0.1', 50677))
+Emre_2 bağlandı (('127.0.0.1', 56721))
+[23:47:26] Emre: En büyük Galatasaray
+[PRIVATE] Emre_2 -> Kaan: Şampiyon Cimbom
+[PRIVATE] Kaan -> Emre_2: Özel mesajın alındı Emre_2
+[23:48:42] Emre: Test tamamlandı sorunsuz çalışıyor
+Emre ayrıldı (('127.0.0.1', 57507))
+Emre_2 ayrıldı (('127.0.0.1', 56721))
+Kaan ayrıldı (('127.0.0.1', 50677))
