@@ -51,3 +51,27 @@ Emre_2 bağlandı (('127.0.0.1', 56721))
 Emre ayrıldı (('127.0.0.1', 57507))
 Emre_2 ayrıldı (('127.0.0.1', 56721))
 Kaan ayrıldı (('127.0.0.1', 50677))
+Emre bağlandı (('127.0.0.1', 50123))
+Emre_2 bağlandı (('127.0.0.1', 50124))
+Kaan bağlandı (('127.0.0.1', 50125))
+[12:19:50] Kaan: Selam
+[12:19:59] Emre_2: Merhaba
+[12:20:03] Emre: Sayaç deneme
+[12:20:11] Emre: Sayaç çalışmadı
+Emre_2 ayrıldı (('127.0.0.1', 50124))
+Kaan ayrıldı (('127.0.0.1', 50125))
+Emre ayrıldı (('127.0.0.1', 50123))
+Emre bağlandı (('127.0.0.1', 50132))
+[12:20:52] Emre: 123
+Emre ayrıldı (('127.0.0.1', 50132))
+Emre bağlandı (('127.0.0.1', 51650))
+[12:43:03] Emre: Selam
+Emre_2 bağlandı (('127.0.0.1', 51651))
+Emre_3 bağlandı (('127.0.0.1', 51652))
+[12:43:46] Emre_3: Selam
+Emre_3 ayrıldı (('127.0.0.1', 51652))
+Emre_2 ayrıldı (('127.0.0.1', 51651))
+Emre ayrıldı (('127.0.0.1', 51650))
+Emre bağlandı (('127.0.0.1', 51096))
+[12:49:09] Emre: Selam
+Emre ayrıldı (('127.0.0.1', 51096))

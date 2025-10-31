@@ -1,11 +1,13 @@
 import socket
 import threading
 from datetime import datetime  # Zaman damgası için kütüphane
-# --- Rate limit için ek import ---
 import time  # zaman damgası tutmak için
 
 clients = []  # bağlanan istemcileri tutacağım yer
 nicknames = {}  # her client için kullanıcı adlarını tutmak için sözlük
+message_count = 0     # Sunucunun işlediği toplam mesaj sayısı
+connection_count = 0  # Toplam bağlanan istemci sayısı
+
 
 # spam önlemek için mesaj limiti
 RATE_LIMIT_MAX = 8          #1 kişinin gönderebileceği max mesaj sayısı (rate limit window süresince)
@@ -32,6 +34,10 @@ def handle_client(client_socket, address):
     nicknames[client_socket] = nickname  # o sırada soketteki ismi kaydeder
     print(f"{nickname} ({address}) bağlandı.")  # bağlanan client hakkında bilgi verir.
     broadcast(f"{nickname} sohbete katıldı.")  # diğer clientlara bilgi verir.
+
+    global connection_count # bu değişken fonksiyon içi değişken olmadığı için global fonksiyonunu kullandım. yoksa hata verir local olmadığı için
+    connection_count += 1 # bağlantı olduğunda 1 artır ve yazdır
+    print(f"[STATS] Aktif kullanıcı: {len(clients)} | Toplam bağlantı: {connection_count}")
 
     log_message(f"{nickname} bağlandı ({address})")  #log dosyasına bağlananı ipsini portunu yazar.
     broadcast_user_list()  # yeni biri bağlanınca herkese bağlı olan kişileri gösterir.
@@ -111,6 +117,10 @@ def handle_client(client_socket, address):
 
             zaman = datetime.now().strftime("%H:%M:%S")  # saat bilgisini alır
             full_message = f"[{zaman}] {nickname}: {message}"  # mesaj formatı
+            global message_count # aynı şekilde local değişken olmadığı için böyle tanımlamam gerekiyor.
+            message_count += 1 #mesaj sayısını 1 artır ve yazdır.
+            print(f"[STATS] Toplam işlenen mesaj: {message_count}")
+
             print(full_message)  # terminalde görüntüler.
             broadcast(full_message)  # Mesajı herkese yollar (gönderen dahil)
             log_message(full_message)  # mesajı log dosyasına kaydeder
@@ -118,6 +128,7 @@ def handle_client(client_socket, address):
             break  # Bağlantı hatası vs. gibi koşullarda bağlantıyı bitirmesi için
 
     print(f"{nickname} ({address}) ayrıldı.")  # ayrılan veya kopan clientin adresi
+    print(f"[STATS] Aktif kullanıcı: {len(clients) - 1}") # Sayaçtan 1 düşer bir client ayrıldığı için
     broadcast(f"{nickname} sohbetten ayrıldı.")  # diğer clientlara bilgi verir.
     log_message(f"{nickname} ayrıldı ({address})")  # Log dosyasına çıkış kaydı ekler.
     clients.remove(client_socket)  # O anda kopan client'i listeden çıkarmak için mesajları görmemesi adına
