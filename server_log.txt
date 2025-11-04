@@ -75,3 +75,37 @@ Emre ayrıldı (('127.0.0.1', 51650))
 Emre bağlandı (('127.0.0.1', 51096))
 [12:49:09] Emre: Selam
 Emre ayrıldı (('127.0.0.1', 51096))
+Emre bağlandı (('127.0.0.1', 58741))
+[13:24:46] Emre: 1
+[13:24:46] Emre: 1
+[13:24:46] Emre: 1
+[13:24:46] Emre: 1
+[13:24:47] Emre: 1
+[13:24:47] Emre: 1
+[13:24:47] Emre: 1
+[13:24:47] Emre: 1
+[RATE-LIMIT] Emre susturuldu (10s)
+Emre bağlandı (('127.0.0.1', 58752))
+Emre_2 bağlandı (('127.0.0.1', 58757))
+Emre_3 bağlandı (('127.0.0.1', 58760))
+[13:35:36] Emre: Selam
+[13:35:41] Emre_2: Merhaba
+[13:35:44] Emre_3: Hi!
+[13:39:16] Emre: 1
+[13:39:16] Emre: 1
+[13:39:16] Emre: 11
+[13:39:16] Emre: 1
+[13:39:16] Emre: 1
+[13:39:16] Emre: 1
+[13:39:16] Emre: 1
+[13:39:17] Emre: 1
+[RATE-LIMIT] Emre susturuldu (10s)
+[PRIVATE] Emre -> Emre_2: merhaba
+Emre ayrıldı (('127.0.0.1', 58752))
+Emre_2 ayrıldı (('127.0.0.1', 58757))
+Emre_3 ayrıldı (('127.0.0.1', 58760))
+Emre bağlandı (('127.0.0.1', 56965))
+Ömer bağlandı (('127.0.0.1', 56971))
+[11:57:39] Ömer: Emre python
+Emre ayrıldı (('127.0.0.1', 56965))
+Ömer ayrıldı (('127.0.0.1', 56971))
